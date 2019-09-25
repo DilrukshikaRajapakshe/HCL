@@ -1,0 +1,100 @@
+<mat-card style="border: 1px solid darkgrey">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Studenyt Information</mat-card-title>
+    </mat-card-header>
+    <form class="example-container"  [formGroup]="angForm" novalidate>
+        <mat-divider style="color: darkgrey"></mat-divider>
+        <br>
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Student Name" formControlName="name" type="text"
+                matTooltip="EX: Lahiru kumare sendanayagame" pattern="[A-Za-z]*">
+            <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['name'].errors.required">
+                    Student name is required.
+                </div>
+                <div *ngIf="angForm.controls['name'].errors.pattern">
+                    Input Invalide(Text only)
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Email" formControlName="email" type="email"
+                matTooltip="EX: savithry.ni@gmail.com">
+            <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['email'].errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="angForm.controls['email'].errors.email">
+                    Please enter a valid email address
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Mobile" formControlName="Mobile" type="text"
+                matTooltip="EX: 0770000000" pattern="[0-9]{10}">
+            <div *ngIf="angForm.controls['Mobile'].invalid && (angForm.controls['Mobile'].dirty || angForm.controls['Mobile'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Mobile'].errors.required">
+                    Mobile is required.
+                </div>
+                <div *ngIf="angForm.controls['Mobile'].errors.pattern">
+                    Please enter a valid Mobile Number
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Parent name" formControlName="Pname" type="text"
+                matTooltip="EX: Suraj Kumare" pattern="[A-Za-z]*">
+            <div *ngIf="angForm.controls['Pname'].invalid && (angForm.controls['Pname'].dirty || angForm.controls['Pname'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Pname'].errors.required">
+                    Parent name is required.
+                </div>
+                <div *ngIf="angForm.controls['Pname'].errors.pattern">
+                    Please enter a valid name
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Parent Mobile" formControlName="PMobile" type="text"
+                matTooltip="EX: 0770000000" pattern="[0-9]{10}">
+            <div *ngIf="angForm.controls['PMobile'].invalid && (angForm.controls['PMobile'].dirty || angForm.controls['PMobile'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['PMobile'].errors.required">
+                    Mobile is required.
+                </div>
+                <div *ngIf="angForm.controls['PMobile'].errors.pattern">
+                    Please enter a valid Mobile Number
+                </div>
+            </div>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <input matInput matInput placeholder="Address" formControlName="Address" type="text" matTooltip="EX: Malabe"
+                pattern="[A-Za-z]*">
+            <div *ngIf="angForm.controls['Address'].invalid && (angForm.controls['Address'].dirty || angForm.controls['Address'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['Address'].errors.required">
+                    Address is required.
+                </div>
+                <div *ngIf="angForm.controls['Address'].errors.pattern">
+                    Please enter a valid Address
+                </div>
+            </div>
+        </mat-form-field>
+
+        <mat-divider style="color: darkgrey"></mat-divider>
+    </form>
+    <mat-card-actions style="width: 500px;">
+        <button mat-raised-button style="background-color: blue; margin-left: 200px;" [disabled]="angForm.invalid" type="submit" (click)="save(angForm.value=null)">Save</button>
+    </mat-card-actions>
+</mat-card>

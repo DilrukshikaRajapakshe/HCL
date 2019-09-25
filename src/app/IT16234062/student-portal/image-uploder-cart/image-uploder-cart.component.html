@@ -1,0 +1,42 @@
+<mat-card class="example-card" style="border: 1px solid darkgrey">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Uplode Image</mat-card-title>
+        <mat-card-subtitle>Date : 14/09/2109</mat-card-subtitle>
+    </mat-card-header>
+    <br>
+    <mat-divider style="color: darkgrey"></mat-divider>
+    <mat-card-content style="margin: 5px;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="avatar-upload">
+                    <div class="avatar-edit">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <label for="imageUpload"></label>
+                    </div>
+                    <div class="avatar-preview">
+                        <div id="imagePreview" style="background-image: url(../../../../assets/img/prs.png);"></div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div class="col-6">
+                <br><br><br><br><br>
+                <div class="row" style="margin-left: 10px;">
+                    <div class="col-7" style=" margin-left: 10px; border: 1px solid darkgrey">Image.png</div>
+                    <div class="col-1">File</div>
+                </div>
+                <div class="row " style="margin-left: 30px;">
+                    <mat-card-actions>
+                        <button mat-raised-button style="background-color: green">Uplode</button>
+                    </mat-card-actions>
+                    <!-- <p style="margin-left: 10px;">Student ID : S001</p> -->
+                </div>
+            </div>
+        </div>
+        <mat-divider style="color: darkgrey"></mat-divider>
+        <div class="raw" style="margin-top: 20px;">
+            <mat-card-title>Student ID : <small> S001</small> </mat-card-title>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,4 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.chosen-drop .chosen-results {
+  max-height: 10px;
+}

@@ -1,0 +1,33 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+#image1{
+  background: url(C:/Users/User/Desktop/WPC/WPC-app/src/assets/img/de.png) ;
+  /* background-color: aqua; */
+  width: 30px;
+  height: 30px;
+  background-size: 30px, 30px;
+
+}
+#image1:hover{
+  /* background-color: blue; */
+  background: url(C:/Users/User/Desktop/WPC/WPC-app/src/assets/img/del.png) ;
+  background-size: 30px, 30px;
+}
+mat-cell{
+  overflow: hidden;
+  width:100px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

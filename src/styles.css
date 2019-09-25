@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-autocomplete-panel-above .mat-autocomplete-panel {
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  max-height: 150px;
+}
+.mat-autocomplete-panel {
+  overflow: inherit;
+}
+input:-internal-autofill-selected {
+  background-color: white !important;
+}
+.mat-toolbar {
+  background: white;
+}

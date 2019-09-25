@@ -1,0 +1,28 @@
+<mat-card style="border: 1px solid darkgrey; width: 900px;">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title style="margin-left: 200px;">Course/Personal Information</mat-card-title>
+        <br>
+    </mat-card-header>
+    <mat-divider style="color: darkgrey"></mat-divider>
+    <br>
+    <div>
+        <form style="margin-right: 100px; width: 860px;">
+            <select name="Position" class="form-control" #selectedValue id="selectedValue"
+                (change)="getSelectValue(selectedValue.value);" matTooltip="Selecte an Information Type" >
+                <option value="select">Select Type</option>
+                <option value="Course">Course Information</option>
+                <option value="Personal">Personal Information</option>
+                <option value="chart">Register Information Chart</option>
+            </select>
+        </form>
+    </div>
+    <br>
+    <mat-divider style="color: darkgrey"></mat-divider>
+    <app-wellcome-massage-of-table *ngIf="result == 1"></app-wellcome-massage-of-table>
+    <app-student-table *ngIf="result == 3"></app-student-table>
+    <app-course-details-table *ngIf="result == 2"></app-course-details-table>
+    <app-student-details-table *ngIf="result == 4"></app-student-details-table>
+    <br>
+</mat-card>
+<br>
