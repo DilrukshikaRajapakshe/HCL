@@ -1,76 +1,84 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WPC-System</a> 
-    <div class=" col-sm-9 col-md-10 bg-dark">
-        <img  src="../assets/img/me.png" style="width: 1%; height: 1%; align-content: right;">
+<mat-sidenav-container class="map-bar-container">
+  <mat-sidenav #sidenav mode="side" opened class="bg-dark col-sm-2" style="padding-left: 0px;padding-right: 0px;">
+    <div class="container-fluid bg-dark " style="padding-left: 0px;
+    padding-right: 0px;">
+      <ul class="nav flex-column" style="margin: 0spx;">
+        <li class="nav-item" style="background:#203f14;color: white;">
+          <a routerLink="/StudentPortal/PersonalInformation" routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="file"></span>
+            <p style="color: white;font-size: 100%">Student Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:blue;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="shopping-cart"></span>
+            <p style="color: white;font-size: 100%">Teacher Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#e65c00b7;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="users"></span>
+            <p style="color: white;font-size: 100%">Class Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#ff9100;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Report Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#321911;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Fee Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#ff4081;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Course Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#26a69a;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Result Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#ab47bc;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Setting Portal</p>
+          </a>
+        </li>
+        <li class="nav-item" style="background:#d50000;color: white;">
+          <a routerLinkActive="active" class="nav-link" href="#">
+            <span data-feather="bar-chart-2"></span>
+            <p style="color: white;font-size: 100%">Quit Portal</p>
+          </a>
+        </li>
+      </ul>
     </div>
-    
-  </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a routerLink="/StudentPortal/PersonalInformation" routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="file"></span>
-                <p style="color: white;font-size: 100%">Student Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                <p style="color: white;font-size: 100%">Teacher Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="users"></span>
-                <p style="color: white;font-size: 100%">Class Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Report Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Fee Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Course Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Result Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Setting Portal</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a  routerLinkActive="active" class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                <p style="color: white;font-size: 100%">Quit Portal</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: #ECFDE6">
+    <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
+      <div class=" col-sm-3 col-md-2 mr-0">
+        <a href="#">
+          <h4 style="color: white; text-align: center;">WPC-System</h4>
+        </a>
+      </div>
+      <div class=" col-sm-9 col-md-10 " style="background-color: #203f14; display: inline-block">
+        <img src="../assets/img/me.png"
+          style="width: 1%; height: 1%; align-content: right; display: inline-block; margin-right: 350px"
+          mat-raised-button (click)="sidenav.toggle()">
+        <h1 style="color: white; text-align: center; margin-bottom: 10px; margin-right: 300px; display: inline-block">
+          Student portal</h1>
+      </div>
+    </nav>
+    <div style="margin-left: 100px;">
+      <router-outlet></router-outlet>
     </div>
-  </div>
-  <div class="container">
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <router-outlet></router-outlet>
-      </main>
-  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

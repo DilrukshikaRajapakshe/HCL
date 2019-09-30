@@ -17,7 +17,7 @@ export class StudentDetailsTableComponent implements OnInit {
     let chart = new CanvasJS.Chart("chartContainer", {
       exportEnabled: true,
       title: {
-        text: "Live Chart with Data-Points from External JSON"
+        text: "Live Chart with Student Ragistation of courses"
       },
       data: [{
         type: "spline",

@@ -12,8 +12,8 @@ export class CourseDetailsCadeComponent implements OnInit {
   e='^[0-9]+(\.[0-9]{1,2})?$';
   f='^[0-9]+(\.[0-9]{1,2})?$';
  
-  angForm: FormGroup;
 
+  angForm: FormGroup;
   constructor(private fb: FormBuilder) { this.createForm(); }
   
   data:any;
@@ -26,16 +26,8 @@ export class CourseDetailsCadeComponent implements OnInit {
       id: ['', Validators.required,Validators.pattern(this.a)],
       txtClass: ['', Validators.required, Validators.pattern(this.b)],
       txtCourse: ['', Validators.required],
-      txtTecher: ['', Validators.required, Validators.pattern(this.d)],
-      txtCourseFree: ['', Validators.required, Validators.pattern(this.e)],
-      txtFee: ['', Validators.required, Validators.pattern(this.f)]
+      txtTecher: ['', Validators.required, Validators.pattern(this.d)]
     });
-  }
-
-  cal(txtCourseFree,txtFee ){
-    const s = parseFloat(txtCourseFree)-parseFloat(txtFee);
-    this.data = s + ".00"
-    console.log(this.data);
   }
 
   

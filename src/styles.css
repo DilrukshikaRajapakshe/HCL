@@ -16,3 +16,6 @@ input:-internal-autofill-selected {
 .mat-toolbar {
   background: white;
 }
+.mat-card{
+  color: #C9FB9A;
+}

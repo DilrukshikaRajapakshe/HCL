@@ -1,9 +1,9 @@
-<mat-card style="border: 1px solid darkgrey;">
+<mat-card style="border: 1px solid darkgrey; background-color: #D7FECA">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>Course Information</mat-card-title>
     </mat-card-header>
-    <form class="example-container"  [formGroup]="angForm" novalidate>
+    <form class="example-container" [formGroup]="angForm" novalidate>
         <mat-divider style="color: darkgrey"></mat-divider>
         <br>
         <mat-form-field class="example-full-width">
@@ -57,47 +57,6 @@
                 </div>
             </div>
         </mat-form-field>
-        <br>
-        <mat-form-field class="example-full-width">
-            <input placeholder="Course Free" #txtCourseFree formControlName="txtCourseFree" type="text" matInput
-                matTooltip="Ex: RS 120.00" pattern="[0-9]+(\.[0-9]{1,2})?">
-            <div *ngIf="angForm.controls['txtCourseFree'].invalid && (angForm.controls['txtCourseFree'].dirty || angForm.controls['txtCourseFree'].touched)"
-                class="alert alert-danger">
-                <div *ngIf="angForm.controls['txtCourseFree'].errors.required">
-                    Course Free is required.
-                </div>
-                <div *ngIf="angForm.controls['txtCourseFree'].errors.pattern">
-                    Input Invalide(Numbers only)
-                </div>
-            </div>
-        </mat-form-field>
-        <br>
-        <mat-form-field class="example-full-width">
-            <input placeholder="Fee Paid" #txtFee formControlName="txtFee" type="text" matInput
-                matTooltip="Ex: RS 120.00" pattern="[0-9]+(\.[0-9]{1,2})?">
-            <div *ngIf="angForm.controls['txtFee'].invalid && (angForm.controls['txtFee'].dirty || angForm.controls['txtFee'].touched)"
-                class="alert alert-danger">
-                <div *ngIf="angForm.controls['txtFee'].errors.required">
-                    Fee Paid is required.
-                </div>
-                <div *ngIf="angForm.controls['txtFee'].errors.pattern">
-                    Input Invalide(Numbers only)
-                </div>
-            </div>
-        </mat-form-field>
-        <br>
-        <mat-form-field class="example-full-width" (click)="cal(txtCourseFree.value,txtFee.value)">
-            <input placeholder="Balanse" type="text" [disabled]="data != null" formControlName="txtBalanse" matInput
-                matTooltip="Clike here to get a balanse" #txtBalanse  value={{data}}>
-        </mat-form-field>
-
-        <br>
-        <mat-divider style="color: darkgrey"></mat-divider>
-        <mat-card-actions style="width: 800px;" >
-            <div style="text-align: center">
-                <button mat-raised-button style="background-color: blue;"[disabled]="angForm.invalid" type="submit" (click)="save(angForm.value=null)">Save</button>
-            </div>
-        </mat-card-actions>
     </form>
 </mat-card>
 <br>

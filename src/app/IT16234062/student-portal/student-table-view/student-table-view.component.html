@@ -1,4 +1,4 @@
-<mat-card style="border: 1px solid darkgrey; width: 900px;">
+<mat-card style="border: 1px solid darkgrey; width: 900px; background-color: #D7FECA">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title style="margin-left: 200px;">Course/Personal Information</mat-card-title>
@@ -7,11 +7,10 @@
     <mat-divider style="color: darkgrey"></mat-divider>
     <br>
     <div>
-        <form style="margin-right: 100px; width: 860px;">
+        <form style="margin-right: 100px; width: 860px; background-color: #D7FECA ">
             <select name="Position" class="form-control" #selectedValue id="selectedValue"
-                (change)="getSelectValue(selectedValue.value);" matTooltip="Selecte an Information Type" >
+                (change)="getSelectValue(selectedValue.value);" matTooltip="Selecte an Information Type" style="background-color: #D7FECA">
                 <option value="select">Select Type</option>
-                <option value="Course">Course Information</option>
                 <option value="Personal">Personal Information</option>
                 <option value="chart">Register Information Chart</option>
             </select>

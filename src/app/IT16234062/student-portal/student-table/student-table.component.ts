@@ -6,6 +6,7 @@ import { Personal } from '../personal';
 import { from } from 'rxjs';
 import {MatDialog, MatDialogRef,MatDialogConfig, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {StudentDetailsCadeUpdateComponent} from '../student-details-cade-update/student-details-cade-update.component';
+import { DeleteComponentComponent } from '../delete-component/delete-component.component';
 @Component({
   selector: 'app-student-table',
   templateUrl: './student-table.component.html',
@@ -265,9 +266,16 @@ export class StudentTableComponent implements OnInit {
 
   }
 
-  // onClose(){
-  //   this.dialogRef.close();
-  // }
+  DeleteRowClicked(row: any): void{
+    console.log(row);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "50%";
+    dialogConfig.height = "58%";
+    this.dialog.open(DeleteComponentComponent,dialogConfig);
+
+  }
 
 }
 

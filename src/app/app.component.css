@@ -121,3 +121,10 @@
   .chosen-drop .chosen-results {
     max-height: 10px;
 }
+.map-bar-container {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

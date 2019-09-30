@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialog, MatDialogRef,MatDialogConfig, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { UpdateComponentComponent } from '../update-component/update-component.component';
 @Component({
   selector: 'app-student-details-cade-update',
   templateUrl: './student-details-cade-update.component.html',
@@ -30,7 +31,7 @@ imports: [
 
 export class StudentDetailsCadeUpdateComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private dialogRef : MatDialogRef<StudentDetailsCadeUpdateComponent>) { this.createForm(); }
+  constructor(private fb: FormBuilder,private dialog :MatDialog, private dialogRef : MatDialogRef<StudentDetailsCadeUpdateComponent>) { this.createForm(); }
 
   ngOnInit() {
   }
@@ -61,5 +62,17 @@ export class StudentDetailsCadeUpdateComponent implements OnInit {
   save( id){
     
     this.dialogRef.close();
+   
+     
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.width = "50%";
+      dialogConfig.height = "58%";
+      this.dialog.open(UpdateComponentComponent,dialogConfig);
+  
+   
   }
+
+
 }

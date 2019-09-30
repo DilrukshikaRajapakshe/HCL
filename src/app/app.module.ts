@@ -67,6 +67,10 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MbscModule } from '@mobiscroll/angular';
 import { StudentDetailsCadeUpdateComponent } from './IT16234062/student-portal/student-details-cade-update/student-details-cade-update.component';
+import { DeleteComponentComponent } from './IT16234062/student-portal/delete-component/delete-component.component';
+import { SaveComponentComponent } from './IT16234062/student-portal/save-component/save-component.component';
+import { UpdateComponentComponent } from './IT16234062/student-portal/update-component/update-component.component';
+import { CourseDetailsCade2ComponentComponent } from './IT16234062/student-portal/course-details-cade2-component/course-details-cade2-component.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +88,11 @@ import { StudentDetailsCadeUpdateComponent } from './IT16234062/student-portal/s
     PersonalInformationComponent,
     CourseInformationComponent,
     WellcomeMassageOfTableComponent,
-    StudentDetailsCadeUpdateComponent
+    StudentDetailsCadeUpdateComponent,
+    DeleteComponentComponent,
+    SaveComponentComponent,
+    UpdateComponentComponent,
+    CourseDetailsCade2ComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -153,8 +161,10 @@ import { StudentDetailsCadeUpdateComponent } from './IT16234062/student-portal/s
     MatRippleModule,
   ],
   entryComponents:[
-    CourseDetailsCadeComponent,
-    StudentDetailsCadeUpdateComponent
+    StudentDetailsCadeUpdateComponent,
+    DeleteComponentComponent,
+    UpdateComponentComponent,
+    SaveComponentComponent
   ]
 })
 export class AppModule { }

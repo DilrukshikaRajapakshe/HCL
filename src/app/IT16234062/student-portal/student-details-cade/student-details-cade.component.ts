@@ -6,7 +6,8 @@ import * as _moment from 'moment';
 import {default as _rollupMoment} from 'moment';
 const moment = _rollupMoment || _moment;
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
-
+import {MatDialog, MatDialogRef,MatDialogConfig, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { SaveComponentComponent } from '../save-component/save-component.component';
 @Component({
   selector: 'app-student-details-cade',
   templateUrl: './student-details-cade.component.html',
@@ -18,7 +19,7 @@ import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 })
 export class StudentDetailsCadeComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { this.createForm(); }
+  constructor(private fb: FormBuilder,private dialog :MatDialog) { this.createForm(); }
 
   ngOnInit() {
   }
@@ -38,5 +39,13 @@ export class StudentDetailsCadeComponent implements OnInit {
       Address: ['', Validators.required, Validators.pattern(this.a)]
     });
   }
+  DeleteRowClicked(): void{
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "50%";
+    dialogConfig.height = "50%";
+    this.dialog.open(SaveComponentComponent,dialogConfig);
 
+  }
 }
