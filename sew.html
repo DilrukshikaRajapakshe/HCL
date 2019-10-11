@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<header>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        ul {
+            list-style-type: none;
+        } li{
+            color: blue;
+        }
+    </style>
+</header>
+
+<body>
+
+    <div>
+        <ul>
+            <li> Document</li>
+            <li id="output"></li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        var convert = function (input) {
+            var output = {};
+            // iterate through each path in the input array:
+            input.forEach(function (path) {
+                var folders = path.split("\\"); // convert this path into an array of folder names
+                // "parent" serves as a marker in the output object pointing to the current folder
+                var parent = output; // the topmost folder will be a child of the output root
+                folders.forEach(function (f) {
+                    parent[f] = parent[f] || {}; // add a folder object if there isn't one already
+                    parent = parent[f]; // the next part of the path will be a child of this part
+                });
+            });
+            console.log(output);
+            return (output);
+        }
+
+        // Draws nested lists for the folder structure
+        var drawFolders = function (input) {
+            var output = "<ul id='folder'>";
+            Object.keys(input).forEach(function (k) {
+                output += "<li id='file'><a> " + k; // draw this folder
+                if (Object.keys(input[k]).length) {
+                    output += drawFolders(input[k]); // recurse for child folders
+                }
+                output += "</a></li>";
+            });
+            output += "</ul>";
+            return output;
+        }
+
+        var input = [
+            "A\\s.html",
+            "A\\A1\\s.html",
+            "A\\A1\\A2\\s.html",
+            "A\\A1\\A2\\A3\\s.html",
+            "A\\A1\\A2\\A3\\w.html",
+            "A\\A1\\A2\\A3\\p.html",
+            "A\\B\\s.html",
+            "A\\B\\B1\\s.html",
+            "A\\B\\B1\\B2\\s.html",
+            "A\\B\\B4\\B5",
+            "A\\B\\B4\\B5\\s.html",
+            "A\\B\\B4\\B5\\B5\\sg.html",
+            "A\\C\\s.html",
+            "A\\C\\C1\\s.html",
+            "A\\C\\C1\\C2\\s.html",
+            "A\\C\\C1\\C2\\c3\\s.html"
+        ];
+        document.getElementById("output").innerHTML = drawFolders(convert(input));
+        function getEventTarget(e) {
+            e = e || window.event;
+            return e.target || e.srcElement;
+        }
+
+        var ul = document.getElementById('file');
+        ul.onclick = function (event) {
+            var target = getEventTarget(event);
+            var d = target.innerHTML;
+            console.log(d);
+            if (d.includes(".html")) {
+                if (d.includes('s.html')) {
+                    parent.open("C:/Users/User/Desktop/WPC/sew.html")
+                }
+            }
+        };
+        
+    </script>
+</body>
+
+</html>
